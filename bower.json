@@ -1,0 +1,29 @@
+{
+  "name": "2dworld",
+  "version": "0.0.1",
+  "authors": [
+    "sunao <sunao_0626@hotmail.com>"
+  ],
+  "description": "Using d3js and Angular to build a 2-d game!",
+  "main": "index.html",
+  "keywords": [
+    "angular",
+    "d3"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-material": "~1.0.6",
+    "angular": "~1.5.3",
+    "d3": "~3.5.16",
+    "normalize-css": "~4.0.0",
+    "ionicons": "~2.0.1",
+    "angularfire": "~1.2.0"
+  }
+}

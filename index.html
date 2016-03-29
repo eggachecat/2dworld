@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html ng-app="app">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>2D World</title>
+
+		<link rel="stylesheet" href="./bower_components/normalize-css/normalize.css">
+		<link rel="stylesheet" href="./bower_components/angular-material/angular-material.css">
+		<link rel="stylesheet" herf="./bower_components/ionicons/css/ionicons.css">
+
+		<!-- Angular Libs -->
+		<script type="text/javascript" src="./bower_components/angular/angular.js"></script>
+		<script type="text/javascript" src="./bower_components/angular-animate/angular-animate.js"></script>
+		<script type="text/javascript" src="./bower_components/angular-aria/angular-aria.js"></script>
+		<script type="text/javascript" src="./bower_components/angular-material/angular-material.js"></script>
+		<script type="text/javascript" src="./bower_components/angular-messages/angular-messages.js"></script>
+
+		<!-- Firebase Libs -->
+		<script type="text/javascript" src="./bower_components/firebase/firebase.js"></script>
+		<script type="text/javascript" src="./bower_components/angularfire/dist/angularfire.js"></script>
+
+		<!-- D3js -->
+		<script type="text/javascript" src="./bower_components/d3/d3.js"></script>
+
+
+		<!-- App Libs -->
+		<script type="text/javascript" src="./app/app.js"></script>
+		
+
+
+	</head>
+
+	<body ng-controller="SnakeController">
+		<div style="position: fixed; width: 100%;">
+			<md-toolbar class="md-light-blue">
+			    <h2 class="md-toolbar-tools">
+			      <span flex>2D Word</span>
+			      <md-button class="md-icon-button" aria-label="設置" ng-click="toggleRight()" ng-hide="isOpenRight()">
+			        <md-tooltip md-direction="left">
+			          設置
+			        </md-tooltip>
+			        	設置
+			        </md-icon>
+			      </md-button>
+			    </h2>
+		  	</md-toolbar>
+		</div>
+		<md-sidenav class="md-sidenav-right md-whiteframe-5dp" md-component-id="right">
+	      <md-toolbar class="md-theme-light">
+	        <h1 class="md-toolbar-tools">Sidenav Right</h1>
+	      </md-toolbar>
+	      <md-content layout-padding>
+	          <md-content style="margin: 16px; padding:-5px">
+			    <h3>
+			      RGB
+			      <span ng-attr-style="border: 1px solid #333; background: rgb({{SNACK_STYLE.r}},{{SNACK_STYLE.g}},{{SNACK_STYLE.b}})"> 
+			      		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			      </span>
+			    </h3>
+			    <md-slider-container>
+			      <span>R({{SNACK_STYLE.r}})</span>
+			      <md-slider flex ng-model="SNACK_STYLE.r" min="0" max="255" aria-label="red" id="red-slider"></md-slider>
+			    </md-slider-container>
+			    <md-slider-container>
+			      <span>G({{SNACK_STYLE.g}})</span>
+			      <md-slider flex ng-model="SNACK_STYLE.g" min="0" max="255" aria-label="green" id="green-slider"></md-slider>
+			    </md-slider-container>
+			    <md-slider-container>
+			      <span>B({{SNACK_STYLE.b}})</span>
+			      <md-slider flex ng-model="SNACK_STYLE.b" min="0" max="255" aria-label="blue" id="blue-slider"></md-slider>
+			    </md-slider-container>
+	      </md-content>
+	    </md-sidenav>
+		 <svg width="10000px" height="10000px"></svg>
+	</body>
+</html>
