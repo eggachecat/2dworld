@@ -54,21 +54,22 @@
 	          <md-content style="margin: 16px; padding:-5px">
 			    <h3>
 			      RGB
-			      <span ng-attr-style="border: 1px solid #333; background: rgb({{SNACK_STYLE.r}},{{SNACK_STYLE.g}},{{SNACK_STYLE.b}})"> 
+			      <span ng-attr-style="border: 1px solid #333; background: rgb({{snake_color.r}},{{snake_color.g}},{{snake_color.b}})"> 
 			      		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 			      </span>
+			      <md-button class="md-raised md-primary" ng-click="paint(snake_color)">變裝</md-button>
 			    </h3>
 			    <md-slider-container>
-			      <span>R({{SNACK_STYLE.r}})</span>
-			      <md-slider flex ng-model="SNACK_STYLE.r" min="0" max="255" aria-label="red" id="red-slider"></md-slider>
+			      <span>R({{snake_color.r}})</span>
+			      <md-slider flex ng-model="snake_color.r" min="0" max="255" aria-label="red" id="red-slider"></md-slider>
 			    </md-slider-container>
 			    <md-slider-container>
-			      <span>G({{SNACK_STYLE.g}})</span>
-			      <md-slider flex ng-model="SNACK_STYLE.g" min="0" max="255" aria-label="green" id="green-slider"></md-slider>
+			      <span>G({{snake_color.g}})</span>
+			      <md-slider flex ng-model="snake_color.g" min="0" max="255" aria-label="green" id="green-slider"></md-slider>
 			    </md-slider-container>
 			    <md-slider-container>
-			      <span>B({{SNACK_STYLE.b}})</span>
-			      <md-slider flex ng-model="SNACK_STYLE.b" min="0" max="255" aria-label="blue" id="blue-slider"></md-slider>
+			      <span>B({{snake_color.b}})</span>
+			      <md-slider flex ng-model="snake_color.b" min="0" max="255" aria-label="blue" id="blue-slider"></md-slider>
 			    </md-slider-container>
 	      </md-content>
 	    </md-sidenav>
